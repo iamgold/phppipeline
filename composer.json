@@ -1,0 +1,21 @@
+{
+    "name": "iamgold/phppipeline",
+    "description": "This is a lightweight library for manipulating graphics magick commands in PHP. ",
+    "keywords": ["php", "pipeline", "linux pipeline", "handler", "command builder", "iamgold"],
+    "type": "library",
+    "authors": [
+        {
+            "name": "Eric Huang",
+            "email": "iamgold0105@gmail.com"
+        }
+    ],
+    "support": {
+        "source": "https://gihub.com/iamgold/phppipeline"
+    },
+    "require": {
+    	"php": ">=7.0.4"
+    },
+    "autoload": {
+        "psr-4": {"iamgold\\phppipeline\\": "src/"}
+    }
+}
