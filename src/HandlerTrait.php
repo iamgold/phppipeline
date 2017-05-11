@@ -1,6 +1,6 @@
 <?php
 
-namespace app\components;
+namespace iamgold\phppipeline;
 
 /**
  * This is a trait class for defined a handler and
