@@ -7,7 +7,7 @@ namespace iamgold\phppipeline;
  * all handler must use this trait.
  *
  * @author Eric Huang <iamgold0105@gmail.com>
- * @version 0.1.0
+ * @version 0.2.0
  */
 trait HandlerTrait
 {
@@ -17,6 +17,21 @@ trait HandlerTrait
 	 * @var HandlerInterface $next
 	 */
 	protected $next;
+
+	/**
+	 * to next
+	 *
+	 * @param array $payload
+	 *
+	 * @return mixed
+	 */
+	public function toNext(array $payload)
+	{
+		if ($this->next)
+			return $this->next->handle($payload);
+
+		return $payload;
+	}
 
 	/**
 	 * Set next handler
