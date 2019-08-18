@@ -2,12 +2,14 @@
 
 namespace iamgold\phppipeline;
 
+use Exception;
+
 /**
  * This class likely an array for collecting handler.
  * It will create a handler chain when resolve as a command.
  *
  * @author Eric Huang <iamgold0105@gmail.com>
- * @version 0.1.0
+ * @version 1.0.0
  */
 class HandlerList
 {
@@ -30,11 +32,11 @@ class HandlerList
 	/**
 	 * Add a handler
 	 *
-	 * @param HandlerInterface $handler
+	 * @param AbstractHandler $handler
 	 * @param string $name default: ''
 	 * @return self
 	 */
-	public function add(HandlerInterface $handler, $name='')
+	public function add(AbstractHandler $handler, $name='')
 	{
 		$name = trim($name);
 		if (!empty($name))
